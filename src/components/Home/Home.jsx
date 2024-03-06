@@ -5,8 +5,8 @@ import cardImg from "../../assets/img/card.png";
 import axios from "axios";
 import Swal from "sweetalert2";
 
-const apiKey = import.meta.env.VITE_API_KEY
-const apiUrl = import.meta.env.VITE_API_URL
+const apiKey = import.meta.env.VITE_API_KEY;
+const apiUrl = import.meta.env.VITE_API_URL;
 
 export default function Home() {
   const [titleLength, setTitleLength] = useState(0);
@@ -93,23 +93,24 @@ export default function Home() {
     setDesc(event.target.value);
   };
   const handleCopyToClipboard = () => {
-    const formString = form.join('\n');
-    
+    const formString = form.join("\n");
+
     // Copy to clipboard
-    navigator.clipboard.writeText(formString)
+    navigator.clipboard
+      .writeText(formString)
       .then(() => {
         Swal.fire({
           position: "top-end",
           icon: "success",
           title: "Copiado al portapapeles!",
           showConfirmButton: false,
-          timer: 1000
+          timer: 1000,
         });
-        console.log('Text successfully copied to clipboard');
+        console.log("Text successfully copied to clipboard");
         // You can also provide user feedback here if needed
       })
       .catch((err) => {
-        console.error('Unable to copy to clipboard', err);
+        console.error("Unable to copy to clipboard", err);
         // Handle the error, such as displaying an error message to the user
       });
   };
@@ -267,14 +268,28 @@ export default function Home() {
             {showCard ? (
               <div className="w-full cursor-pointer md:w-3/4 p-4 border mt-4 rounded-md">
                 <div>
-                  <h2 onClick={handleCopyToClipboard} className="cursor-pointer text-center font-medium text-lg my-3 underline">
+                  <h2
+                    onClick={handleCopyToClipboard}
+                    className="cursor-pointer text-center font-medium text-lg my-3 underline"
+                  >
                     Click para copiar
-                  </h2> 
-                  <p onClick={handleCopyToClipboard} className="cursor-pointer text-center text-xs p2 rounded-md border border-red-500 my-2 bg-red-100"><strong>CUIDADO:</strong> Deberas cambiar las <strong>imagenes</strong> y/o <strong>URL</strong>.</p>
-                  <div onClick={handleCopyToClipboard} className="cursor-pointer border rounded-md p-2 text-xs">
+                  </h2>
+                  <p
+                    onClick={handleCopyToClipboard}
+                    className="cursor-pointer text-center text-xs p2 rounded-md border border-red-500 my-2 bg-red-100"
+                  >
+                    <strong>CUIDADO:</strong> Deberas cambiar las{" "}
+                    <strong>imagenes</strong> y/o <strong>URL</strong>.
+                  </p>
+                  <div
+                    onClick={handleCopyToClipboard}
+                    className="cursor-pointer border rounded-md p-2 text-xs"
+                  >
                     <p>
                       {form.map((item, index) => (
-                        <span className="block" key={index}>{item}</span>
+                        <span className="block" key={index}>
+                          {item}
+                        </span>
                       ))}
                     </p>
                   </div>
@@ -373,7 +388,7 @@ export default function Home() {
                     borderRadius: "0",
                     height: "270px",
                     objectFit: "cover",
-                    backgroundColor:"white"
+                    backgroundColor: "white",
                   }}
                   className=" w-full"
                 ></img>
@@ -413,7 +428,7 @@ export default function Home() {
                     borderRadius: "0",
                     height: "270px",
                     objectFit: "cover",
-                    backgroundColor:"white" 
+                    backgroundColor: "white",
                   }}
                   className=" w-full"
                 ></img>
