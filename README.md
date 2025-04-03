@@ -1,30 +1,37 @@
 # MetataGenerator App
 
-Esta aplicacion fue desarrollada por Ivan Iraldi, con el objetivo de crear una aplicacion que agilice la creacion de las etiquetas meta.
+MetataGenerator App es una aplicación desarrollada por **Iván Iraldi** con el objetivo de agilizar la creación de etiquetas meta para sitios web.
 
-<h1>Instalacion:</h1>
-<h2>
-<p>
-1. Descargar el repositorio de manera local (Deja tu estrella ☺)
-</p>
-<br>
-<p>
-2. Ejecutar la instalacion de los paquetes: <br> -- [npm install]
-</p>
-<br>
+## 🚀 Instalación
 
-<p>
-3. Crear archivo .env en la raiz del directorio, en el pondremos la api-key y api-host de Jsonlink de la siguiente manera: <br> <br>
-VITE_API_KEY="tu_api_key"<br>
+Sigue estos pasos para instalar y ejecutar la aplicación en tu entorno local:
+
+### 1️⃣ Clonar el repositorio
+```bash
+git clone https://github.com/tu-usuario/metatagenerator.git
+cd metatagenerator
+```
+
+⭐ **¡No olvides dejar tu estrella en el repositorio!** ☺
+
+### 2️⃣ Instalar dependencias
+```bash
+npm install
+```
+
+### 3️⃣ Configurar variables de entorno
+Crea un archivo `.env` en la raíz del directorio con el siguiente contenido:
+
+```env
+VITE_API_KEY="tu_api_key"
 VITE_API_URL="https://jsonlink.io/api/extract"
-</p>
-<br>
-<p>
-4. Ejecutar la aplicación: <br> -- [npm run dev]
-</p>
-<br>
-</h2>
+```
 
-Links Utiles:
-- [MetataGenerator Demo](https://metatagenerator.vercel.app)
-- [JsonLink](https://jsonlink.io/)
+### 4️⃣ Ejecutar la aplicación
+```bash
+npm run dev
+```
+
+## 🔗 Links útiles
+- 🎯 [MetataGenerator Demo](https://metatagenerator.vercel.app)
+- 🔗 [JsonLink](https://jsonlink.io/)
